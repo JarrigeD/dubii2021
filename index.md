@@ -5,3 +5,5 @@ Bienvenue sur mon site *Github pages* !
 ### Oui !
 
 [And this one?](fichier_RStudio.Rmd)
+
+J'ai réinitialisé mon répertoire. J'espère qu'il va fonctionner !
