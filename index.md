@@ -8,3 +8,5 @@
 
 J'ai réinitialisé mon répertoire. J'espère qu'il va fonctionner !
 Tout semble en place !
+
+[Rapport multiqc évaluation M4M5](multiqc_report.html)
