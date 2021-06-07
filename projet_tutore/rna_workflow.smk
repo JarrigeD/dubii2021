@@ -7,8 +7,10 @@
 #------------------------------------------------------------------------------
 
 SAMPLES, = glob_wildcards(config["data_directory"] + "{sample}.fastq.gz")
+SAMPLES.sort()
 FILES = ["Aligned.sortedByCoord.out.bam", "Log.final.out", "Log.out", "Log.progress.out", "SJ.out.tab"]
 INDEX = ["chrLength.txt", "geneInfo.tab", "sjdbInfo.txt", "chrNameLength.txt", "Genome", "sjdbList.fromGTF.out.tab", "chrName.txt", "genomeParameters.txt", "sjdbList.out.tab", "chrStart.txt", "Log.out", "transcriptInfo.tab", "exonGeTrInfo.tab", "SA", "exonInfo.tab", "SAindex"]
+
 
 rule all:
     input: 
@@ -80,7 +82,7 @@ rule generate_temp_tables:
 
 rule generate_final_table:
     input: 
-        tables = expand(config["results_directory"] + "tmp_SRR6904{id}.table", id=range(692,740)),
+        tables = expand(config["results_directory"] + "tmp_{sample}.table", sample=SAMPLES),
         gene_names = config["gene_names"]
     output: config["results_directory"] + "total_counts.csv"
     params:
@@ -94,7 +96,7 @@ rule generate_final_table:
 
     """
 
-    
+
 
 
     

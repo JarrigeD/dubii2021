@@ -1,0 +1,30 @@
+---
+#-----------------------------------------
+# Config file for reduced RNAseq data
+# Author : Domitille Jarrige
+# Date : 2021-04-30
+#-----------------------------------------
+
+parameters:
+    threads: 8
+    memory: 4
+    star_version: star/2.7.5a
+    subread_version: subread/2.0.1
+data_directory:
+    data/reduced_data/
+results_directory:
+    results/mapping/reduced_data/
+genome_directory:
+    data/phytozome/Creinhardtii/v5.6/
+nuclear_genome:
+    data/phytozome/Creinhardtii/v5.6/assembly/Creinhardtii_281_v5.0.fa
+organelles_genome:
+    data/phytozome/Creinhardtii/v5.6/assembly/Cre.CP.MT.genomes.fasta
+annotation:
+    data/phytozome/Creinhardtii/v5.6/annotation/Cre_all_genomes.gff3
+sample_ref:
+    data/sample_DiscoRythm_format.tsv
+gene_names:
+    results/mapping/reduced_data/gene_names.table
+
+...
