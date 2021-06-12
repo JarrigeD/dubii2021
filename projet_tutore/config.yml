@@ -1,19 +1,23 @@
 ---
 #-----------------------------------------
-# Config file for reduced RNAseq data
+# Config file for full RNAseq data
 # Author : Domitille Jarrige
-# Date : 2021-04-30
+# Date : 2021-06-12
 #-----------------------------------------
 
 parameters:
     threads: 8
     memory: 4
+    fastqc_version: fastqc/0.11.9
+    multiqc_version: multiqc/1.9
     star_version: star/2.7.5a
     subread_version: subread/2.0.1
 data_directory:
-    data/reduced_data/
+    data/full_data/
+quality_control_directory:
+    results/QC/full_data/
 results_directory:
-    results/mapping/reduced_data/
+    results/mapping/full_data/
 genome_directory:
     data/phytozome/Creinhardtii/v5.6/
 nuclear_genome:

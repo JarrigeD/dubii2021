@@ -1,10 +1,15 @@
-#------------------------------------------------------------------------------
-# Objectifs du script :
-#  Traitement des jeux de données de RNAseq réduits ou complets depuis l'indexation du génome de référence avec STAR,
-#  jusqu'à la production d'une table de comptage totale de tous les échantillons à chaque temps de prélèvement.
-# Auteur : Domitille Jarrige
-# Date : 2021-04-30
-#------------------------------------------------------------------------------
+########################################################################################################################
+# Workflow purpose :                                                                                                   #
+#     Treats Chlamydomonas reinhardtii timeseries RNAseq datasets from their raw state through quality check and       #
+#     alignment on an indexed reference genome to a single gene counts table with all the librairies.                  #
+# Author : Domitille Jarrige                                                                                           #
+# Date   : 2021-06-12                                                                                                  #
+#----------------------------------------------------------------------------------------------------------------------#
+#                     CHANGE PARAMETERS AND DIRECTORIES IN THE CONFIG FILE BEFORE RUNNING                              #
+#----------------------------------------------------------------------------------------------------------------------#
+# A test dataset is available at https://github.com/JarrigeD/dubii2021/tree/master/projet_tutore                       #
+# to run workflow:       snakemake --drmaa  --snakefile {SNAKEFILE} --configfile {CONFIG_FILE}                         #        
+########################################################################################################################
 
 SAMPLES, = glob_wildcards(config["data_directory"] + "{sample}.fastq.gz")
 SAMPLES.sort()
@@ -16,7 +21,37 @@ rule all:
     input: 
         expand(config["results_directory"] + "{sample}_on_Crev5.6/{file}", sample = SAMPLES, file = FILES),
         expand(config["results_directory"] + "{sample}_on_Crev5.6/{sample}_counts.csv", sample = SAMPLES),
-        config["results_directory"] + "total_counts.csv"
+        config["results_directory"] + "total_counts.csv",
+        expand(config["quality_control_directory"] + "{sample}_fastqc.html", sample = SAMPLES),
+        expand(config["quality_control_directory"] + "{sample}_fastqc.zip", sample = SAMPLES),
+        config["quality_control_directory"] + "multiqc_report.html"
+
+rule fastqc:
+    input: config["data_directory"] + "{sample}.fastq.gz"
+    output:
+        html = config["quality_control_directory"] + "{sample}_fastqc.html",
+        zip = config["quality_control_directory"] + "{sample}_fastqc.zip"
+    threads: config["parameters"]["threads"]
+    params:
+        fastqc_version = config["parameters"]["fastqc_version"],
+        outdir = config["quality_control_directory"]
+    shell: """
+        mkdir -p {params.outdir}
+        module load {params.fastqc_version}
+        fastqc {input} --threads={threads} -o {params.outdir}
+    """
+
+rule multiqc:
+    input: config["quality_control_directory"][:-1]
+    output: config["quality_control_directory"] + "multiqc_report.html"
+    params:
+        multiqc_version = config["parameters"]["multiqc_version"],
+        outdir = config["quality_control_directory"][:-1]
+    shell: """
+        module load {params.multiqc_version}
+        multiqc {input} -o {params.outdir} -f
+    """
+
 
 rule STAR_genome_indexation:
     input:
