@@ -1,0 +1,6 @@
+run_accession	sample_title	time	replicate_id	DiscoRythm_format	condition
+SRR6904692	dark -11 h	0.0	1	0.0_SRR6904692_1	dark
+SRR6904701	dark -5 h	6.0	1	6.0_SRR6904701_1	dark
+SRR6904719	light 1 h	12.0	1	12.0_SRR6904719_1	light
+SRR6904728	light 7 h	18.0	1	18.0_SRR6904728_1	light
+SRR6904737	dark 13 h	24.0	1	24.0_SRR6904737_1	dark
