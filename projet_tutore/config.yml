@@ -1,9 +1,9 @@
 ---
-#-----------------------------------------
-# Config file for full RNAseq data
-# Author : Domitille Jarrige
-# Date : 2021-06-12
-#-----------------------------------------
+####################################################################
+# Config file for Chlamydomonas reinhardtii RNAseq data processing #
+# Author : Domitille Jarrige                                       #
+# Date   : 2021-06-12                                              #
+####################################################################
 
 parameters:
     threads: 8
@@ -13,22 +13,20 @@ parameters:
     star_version: star/2.7.5a
     subread_version: subread/2.0.1
 data_directory:
-    data/full_data/
+    data/
 quality_control_directory:
-    results/QC/full_data/
+    results/QC/
 results_directory:
-    results/mapping/full_data/
+    results/mapping/
 genome_directory:
-    data/phytozome/Creinhardtii/v5.6/
+    data/genome/
 nuclear_genome:
-    data/phytozome/Creinhardtii/v5.6/assembly/Creinhardtii_281_v5.0.fa
+    data/genome/assembly/your_nuclear_genome.fa
 organelles_genome:
-    data/phytozome/Creinhardtii/v5.6/assembly/Cre.CP.MT.genomes.fasta
+    data/genome/assembly/your_organelle_genomes.fa
 annotation:
-    data/phytozome/Creinhardtii/v5.6/annotation/Cre_all_genomes.gff3
+    data/genome/annotation/your_annotation_all_genomes.gff3
 sample_ref:
-    data/sample_DiscoRythm_format.tsv
-gene_names:
-    results/mapping/reduced_data/gene_names.table
+    data/sample_metadata.tsv
 
 ...

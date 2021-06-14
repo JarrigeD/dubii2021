@@ -1,15 +1,16 @@
-########################################################################################################################
-# Workflow purpose :                                                                                                   #
-#     Treats Chlamydomonas reinhardtii timeseries RNAseq datasets from their raw state through quality check and       #
-#     alignment on an indexed reference genome to a single gene counts table with all the librairies.                  #
-# Author : Domitille Jarrige                                                                                           #
-# Date   : 2021-06-12                                                                                                  #
-#----------------------------------------------------------------------------------------------------------------------#
-#                     CHANGE PARAMETERS AND DIRECTORIES IN THE CONFIG FILE BEFORE RUNNING                              #
-#----------------------------------------------------------------------------------------------------------------------#
-# A test dataset is available at https://github.com/JarrigeD/dubii2021/tree/master/projet_tutore                       #
-# to run workflow:       snakemake --drmaa  --snakefile {SNAKEFILE} --configfile {CONFIG_FILE}                         #        
-########################################################################################################################
+#####################################################################################################################
+# Workflow purpose :                                                                                                #
+#     Treats Chlamydomonas reinhardtii timeseries RNAseq datasets from their raw state through quality check and    #
+#     alignment on an indexed reference genome to a single gene counts table with all the librairies.               #
+# Author : Domitille Jarrige                                                                                        #
+# Date   : 2021-06-14                                                                                               #
+#-------------------------------------------------------------------------------------------------------------------#
+#                     CHANGE PARAMETERS AND DIRECTORIES IN THE CONFIG FILE BEFORE RUNNING                           #
+#-------------------------------------------------------------------------------------------------------------------#
+# A test dataset is available at https://github.com/JarrigeD/dubii2021/tree/master/projet_tutore                    #
+# to run workflow:       snakemake --drmaa  --jobs={YOURCHOICE} --snakefile {SNAKEFILE} --configfile {CONFIG_FILE}  #
+#                      Do not forget to build your project architecture before running!                             #
+#####################################################################################################################
 
 SAMPLES, = glob_wildcards(config["data_directory"] + "{sample}.fastq.gz")
 SAMPLES.sort()
@@ -22,6 +23,7 @@ rule all:
         expand(config["results_directory"] + "{sample}_on_Crev5.6/{file}", sample = SAMPLES, file = FILES),
         expand(config["results_directory"] + "{sample}_on_Crev5.6/{sample}_counts.csv", sample = SAMPLES),
         config["results_directory"] + "total_counts.csv",
+        config["results_directory"] + "gene_name.tab",
         expand(config["quality_control_directory"] + "{sample}_fastqc.html", sample = SAMPLES),
         expand(config["quality_control_directory"] + "{sample}_fastqc.zip", sample = SAMPLES),
         config["quality_control_directory"] + "multiqc_report.html"
@@ -114,16 +116,21 @@ rule generate_temp_tables:
         cut -f 8 {input.count_table} | tail -n +3 >> {output}
     """
 
+rule generate_ref_gene_file:
+    input: expand(config["results_directory"] + "{sample}_on_Crev5.6/{sample}_counts.csv", sample=SAMPLES)
+    output: config["results_directory"] + "gene_name.tab"
+    shell:"""
+        tail -n +2 {input[1]} | cut -f 1 > {output}
+    """
 
 rule generate_final_table:
     input: 
         tables = expand(config["results_directory"] + "tmp_{sample}.table", sample=SAMPLES),
-        gene_names = config["gene_names"]
+        gene_names = config["results_directory"] + "gene_name.tab"
     output: config["results_directory"] + "total_counts.csv"
     params:
         parentdir = config["results_directory"]
     shell: """
-        #cut -f 1  > gene_names
         paste {input.tables} > tmp_out
         paste {input.gene_names} tmp_out > {output}
         rm {params.parentdir}/tmp_SRR*
