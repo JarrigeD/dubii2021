@@ -23,9 +23,9 @@ The protein abundance table from: https://www.pnas.org/content/suppl/2019/01/17/
 - metadata file: with information on the miniRNA-seq dataset
 
 ## How to use the workflow and scripts:
-(https://snakemake.github.io/) [![Snakemake](https://img.shields.io/badge/snakemake-≥5.6.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
+[![Snakemake](https://img.shields.io/badge/snakemake-≥5.6.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
 ### Required:
-- [snakemake]
+- [snakemake](https://snakemake.github.io/) 
 - slurm-drmaa
 - STAR
 - featureCounts
