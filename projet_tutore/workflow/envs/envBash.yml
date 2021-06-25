@@ -1,0 +1,16 @@
+---
+#-----------------------------------------
+# Environment file for RNA workflow
+# Author : Domitille Jarrige
+# Date : 2021-06-25
+#-----------------------------------------
+name: envBash
+channels:
+ - conda-forge
+ - bioconda
+dependencies:
+ - star == 2.7.5a
+ - subread == 2.0.1
+ - fastqc == 0.11.9
+ - multiqc == 1.9
+... 

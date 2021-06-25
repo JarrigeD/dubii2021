@@ -8,16 +8,14 @@
 parameters:
     threads: 8
     memory: 4
-    fastqc_version: fastqc/0.11.9
-    multiqc_version: multiqc/1.9
-    star_version: star/2.7.5a
-    subread_version: subread/2.0.1
 data_directory:
     data/
 quality_control_directory:
     results/QC/
 results_directory:
     results/mapping/
+rhythm_directory:
+    results/rhythmic_analysis/
 genome_directory:
     data/genome/
 nuclear_genome:
