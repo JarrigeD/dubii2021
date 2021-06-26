@@ -38,7 +38,7 @@ Instead, a html report shows a glimpse of what can be found using the statistica
 
 ### To run workflow:
 
-`snakemake --cores={your_pick} --snakefile {scripts/rna_workflow.smk} --configfile {scripts/config.yml} --use-conda`
+`snakemake --cores={your_pick} --snakefile {rna_workflow.smk} --configfile {config.yml} --use-conda`
 
 
 IN PROGRESS
