@@ -34,7 +34,7 @@ The protein abundance table from: https://www.pnas.org/content/suppl/2019/01/17/
 
 You can use the mini dataset to test the snakemake workflow, change the parameters in the config file before running. Build the project architecture with the various directories first. The test data is too small to extract significant statistical results with the R script part of the workflow.
 
-Instead, a html report shows a glimpse of what can be found using the statistical analysis with the data from _Strenkert et al, 2019_.
+Instead, this **[html report](https://jarriged.github.io/dubii2021/projet_tutore/rhythmic_analyses)** shows a glimpse of what can be found using the statistical analysis with the data from _Strenkert et al, 2019_.
 
 ### To run workflow:
 
