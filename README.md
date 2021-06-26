@@ -8,3 +8,6 @@ _________
 Ceci est le répertoire accueillant une partie des projets réalisée lors de ma participation au **diplôme universitaire de bioinformatique intégrative** en 2021.
 
 Le repertoire `mini-projets` contient les rapports de devoirs réalisés lors du DUBII, le répertoire `projet_tutore` contient le code que j'ai réalisé pour mon projet tutoré (stage de 20 jours) sous la tutelle de [clairetn](https://github.com/clairetn)
+
+
+**[projet tutoré html report](https://jarriged.github.io/dubii2021/projet_tutore/rhythmic_analyses)**
