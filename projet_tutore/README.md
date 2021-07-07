@@ -1,5 +1,5 @@
 ﻿## Introduction
-#### This repository contains my personal training project for DUBII. I worked on it under the guidance of [clairetn](https://github.com/clairetn) at [I2BC](https://www.i2bc.paris-saclay.fr/spip.php?article391).
+#### This repository contains my personal training project for DUBII. I worked on it under the guidance of [clairetn](https://github.com/clairetn) at [I2BC](https://www.i2bc.paris-saclay.fr/spip.php?article391). It was a 20 days internship.
 
 The subject was: 
 ## Study of nuclear and organellar genomes interactions in the green microalga _Chlamydomonas reinhardtii_.
