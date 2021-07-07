@@ -1,5 +1,5 @@
 ﻿## Introduction
-#### This repository contains my personal training project for DUBII. I worked on it under the guidance of [clairetn](https://github.com/clairetn) at [I2BC](https://www.i2bc.paris-saclay.fr/spip.php?article391).
+#### This repository contains my personal training project for DUBII. I worked on it under the guidance of [clairetn](https://github.com/clairetn) at [I2BC](https://www.i2bc.paris-saclay.fr/spip.php?article391). It was a 20 days internship.
 
 The subject was: 
 ## Study of nuclear and organellar genomes interactions in the green microalga _Chlamydomonas reinhardtii_.
@@ -30,10 +30,11 @@ https://www.pnas.org/content/suppl/2019/01/17/1815238116.DCSupplemental
 - html report showing part of my statistical analyses in R
 
 ## Flowchart of the snakemake workflow:
-![flow_chart](images/flow_chart_github_ver)
+![flow_chart](https://jarriged.github.io/dubii2021/projet_tutore/images/flow_chart_github_ver.png)
 
 ## How to use the workflow and scripts:
-[![Snakemake](https://img.shields.io/badge/snakemake-≥5.6.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
+[![Snakemake](https://img.shields.io/badge/snakemake-≥6.5.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
+[![Conda](https://img.shields.io/badge/conda-≥4.10.0-brightgreen.svg?style=flat)](https://conda.io/projects/conda/en/latest/index.html)
 ### Required:
 - [snakemake](https://snakemake.github.io/) 
 - [conda](https://docs.conda.io/projects/conda/en/latest/index.html)
