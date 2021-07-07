@@ -2,7 +2,7 @@
 #### This repository contains my personal training project for DUBII. I worked on it under the guidance of [clairetn](https://github.com/clairetn) at [I2BC](https://www.i2bc.paris-saclay.fr/spip.php?article391).
 
 The subject was: 
-# Study of nuclear and organellar genomes interactions in the green microalga _Chlamydomonas reinhardtii_.
+## Study of nuclear and organellar genomes interactions in the green microalga _Chlamydomonas reinhardtii_.
 
 It was based on public data from :
 
@@ -44,5 +44,3 @@ Instead, this **[html report](https://jarriged.github.io/dubii2021/projet_tutore
 
 `snakemake --cores={your_pick} --snakefile {rna_workflow.smk} --configfile {config.yml} --use-conda`
 
-
-IN PROGRESS
