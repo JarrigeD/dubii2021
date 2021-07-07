@@ -33,7 +33,8 @@ https://www.pnas.org/content/suppl/2019/01/17/1815238116.DCSupplemental
 ![flow_chart](https://jarriged.github.io/dubii2021/projet_tutore/images/flow_chart_github_ver.png)
 
 ## How to use the workflow and scripts:
-[![Snakemake](https://img.shields.io/badge/snakemake-≥5.6.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
+[![Snakemake](https://img.shields.io/badge/snakemake-≥6.5.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
+[![Conda](https://img.shields.io/badge/conda-≥4.10.0-brightgreen.svg?style=flat)](https://conda.io/projects/conda/en/latest/index.html)
 ### Required:
 - [snakemake](https://snakemake.github.io/) 
 - [conda](https://docs.conda.io/projects/conda/en/latest/index.html)
