@@ -1,4 +1,4 @@
-## Introduction
+﻿## Introduction
 #### This repository contains my personal training project for DUBII. I worked on it under the guidance of [clairetn](https://github.com/clairetn) at [I2BC](https://www.i2bc.paris-saclay.fr/spip.php?article391).
 
 The subject was: 
@@ -25,6 +25,8 @@ The protein abundance table from: https://www.pnas.org/content/suppl/2019/01/17/
 - metadata file: with information on the miniRNA-seq dataset
 - html report showing part of my statistical analyses in R
 
+## Flowchart of the snakemake workflow:
+![flow_chart](images/flow_chart_github_ver)
 
 ## How to use the workflow and scripts:
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.6.0-brightgreen.svg?style=flat)](https://snakemake.readthedocs.io)
