@@ -3,6 +3,14 @@ This repository contains some of the training projects I have worked on while fo
 
 You will find the html reports of mini-projects in `mini-projets` and my work on the tutored project (20 days training internship) in `projet_tutore`, a more thorough training project I have worked on under the guidance of [clairetn](https://github.com/clairetn).
 
+_________
+
+Ceci est le répertoire accueillant une partie des projets réalisée lors de ma participation au **diplôme universitaire de bioinformatique intégrative** en 2021.
+
+Le repertoire `mini-projets` contient les rapports de devoirs réalisés lors du DUBII, le répertoire `projet_tutore` contient le code que j'ai réalisé pour mon projet tutoré (stage de 20 jours) sous la tutelle de [clairetn](https://github.com/clairetn)
+
+_________
+
 | mini-projets |   |
 | ----------- | ----------- |
 | Python project | [link](https://jarriged.github.io/dubii2021/mini-projets/python_project_djarrige.html) |
@@ -15,11 +23,6 @@ You will find the html reports of mini-projects in `mini-projets` and my work on
 | ----------- | ----------- |
 | project page | [link](https://jarriged.github.io/dubii2021/projet_tutore) |
 | short html report | [link](https://jarriged.github.io/dubii2021/projet_tutore/rhythmic_analyses)|
-_________
-
-Ceci est le répertoire accueillant une partie des projets réalisée lors de ma participation au **diplôme universitaire de bioinformatique intégrative** en 2021.
-
-Le repertoire `mini-projets` contient les rapports de devoirs réalisés lors du DUBII, le répertoire `projet_tutore` contient le code que j'ai réalisé pour mon projet tutoré (stage de 20 jours) sous la tutelle de [clairetn](https://github.com/clairetn)
 
 
 
