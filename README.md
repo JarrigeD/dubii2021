@@ -1,5 +1,5 @@
 # dubii2021
-🇬🇧
+:gb:
 
 This repository contains some of the training projects I have worked on while following the **[_diplôme universitaire de bioinformatique intégrative_](https://odf.u-paris.fr/fr/offre-de-formation/diplome-d-universite-du-diu-1/sciences-technologies-sante-STS/du-bioinformatique-integrative-dubii-DUSBIIN_118.html)** in 2021.
 
@@ -7,7 +7,7 @@ You will find the html reports of mini-projects in `mini-projets` and my work on
 
 _________
 
-🇫🇷
+:fr:
 
 Ceci est le répertoire accueillant une partie des projets réalisée lors de ma participation au **diplôme universitaire de bioinformatique intégrative** en 2021.
 
