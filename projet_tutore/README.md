@@ -36,6 +36,7 @@ The protein abundance table from:
 ### Required:
 - [snakemake](https://snakemake.github.io/) 
 - [conda](https://docs.conda.io/projects/conda/en/latest/index.html)
+- **non-Windows operating system** (some packages are unavailable for Windows)
 
 You can use the mini dataset to test the snakemake workflow, change the parameters in the config file before running. Build the project architecture with the various directories first. The test data is too small to extract significant statistical results with the R script part of the workflow.
 
