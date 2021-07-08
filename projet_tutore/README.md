@@ -12,12 +12,10 @@ Where synchronised cultures of _Chlamydomonas reinhardtii_ (strain CC-5390) were
 Samples were collected at regular intervals and subjected to a transcriptomics analysis by RNA-Seq and proteomics analysis by LC-MS/MS.
 
 The RNA-seq data was collected from: 
-
-https://www.ebi.ac.uk/ena/browser/view/PRJNA445880
+[https://www.ebi.ac.uk/ena/browser/view/PRJNA445880](https://www.ebi.ac.uk/ena/browser/view/PRJNA445880)
 
 The protein abundance table from: 
-
-https://www.pnas.org/content/suppl/2019/01/17/1815238116.DCSupplemental
+[https://www.pnas.org/content/suppl/2019/01/17/1815238116.DCSupplemental](https://www.pnas.org/content/suppl/2019/01/17/1815238116.DCSupplemental)
 
 ## Contents
 
